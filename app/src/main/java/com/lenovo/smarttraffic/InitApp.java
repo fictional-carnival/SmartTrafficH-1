@@ -102,7 +102,7 @@ public class InitApp extends MultiDexApplication {
     }
 
     public static String timeFormat(Date date, String Format) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(Format);
         simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"));
         return simpleDateFormat.format(date);
     }

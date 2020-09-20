@@ -33,10 +33,10 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
         if (InitApp.isLogin) {
             switch (view.getId()) {
                 case R.id.ll_etc:
-//                    startActivity(new Intent(this, ETCActivty.class));
+                    startActivity(new Intent(this, EtcActivity.class));
                     break;
                 case R.id.ll_qd:
-//                    startActivity(new Intent(this, SignActivity.class));
+                    startActivity(new Intent(this, SginActivity.class));
                     break;
                 case R.id.bt_exit:
                     InitApp.isLogin = false;

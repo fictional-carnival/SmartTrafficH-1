@@ -106,7 +106,7 @@
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/border_circle"
                 android:textColor="#000"
-                android:text="查询"
+                android:text="充值"
                 android:textSize="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />

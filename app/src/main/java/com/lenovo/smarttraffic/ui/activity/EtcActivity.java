@@ -68,7 +68,7 @@ public class EtcActivity extends BaseActivity {
     }
 
     private void InitView() {
-        initToolBar(findViewById(R.id.toolbar), true, getString(R.string.item1));
+        initToolBar(findViewById(R.id.toolbar), true, "ETC账户");
         textViews = new ArrayList<TextView>() {{
             add(findViewById(R.id.tv1));
             add(findViewById(R.id.tv2));
@@ -148,7 +148,7 @@ public class EtcActivity extends BaseActivity {
        sp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
            @Override
            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-               mm = i * 50;
+               mm = (i+1) * 50;
            }
 
            @Override
@@ -173,12 +173,12 @@ public class EtcActivity extends BaseActivity {
                    JSONObject jsonObject = new JSONObject();
                    jsonObject.put("index", index + 1);
                    jsonObject.put("money", mm);
-                   jsonObject.put("user",InitApp.getUser("username", InitApp.sp.getString("UserName", null)).getUsername());
-                   jsonObject.put("time",InitApp.timeFormat(new Date(),"yyyy.MM.dd HH:ss"));
+                   jsonObject.put("user","user1");
+                   jsonObject.put("time",InitApp.timeFormat(new Date(),"YYYY.MM.dd HH:mm"));
                    etcArray.getJSONObject(index).getJSONArray("his").put(jsonObject);
                    int money = Integer.parseInt(etcArray.getJSONObject(index).getString("money"));
                    money += mm;
-                   textViews.get(0).setText(money);
+                   textViews.get(0).setText(money+"");
                    etcArray.getJSONObject(index).put("money", money + "");
                    InitApp.edit.putString("etcc", etcArray.toString()).commit();
                } catch (JSONException e) {
@@ -245,10 +245,10 @@ public class EtcActivity extends BaseActivity {
 
             if (index3 == 1) {
                 try {
-                    tv_2.setText(his.getJSONObject(his.length() - i).getInt("index"));
-                    tv_3.setText(his.getJSONObject(his.length() - i).getInt("money"));
-                    tv_4.setText(his.getJSONObject(his.length() - i).getInt("user"));
-                    tv_5.setText(his.getJSONObject(his.length() - i).getInt("time"));
+                    tv_2.setText(his.getJSONObject(his.length() - i).getInt("index")+"");
+                    tv_3.setText(his.getJSONObject(his.length() - i).getInt("money")+"");
+                    tv_4.setText(his.getJSONObject(his.length() - i).getString("user")+"");
+                    tv_5.setText(his.getJSONObject(his.length() - i).getString("time")+"");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -256,8 +256,8 @@ public class EtcActivity extends BaseActivity {
                 try {
                     tv_2.setText(his.getJSONObject(i).getInt("index"));
                     tv_3.setText(his.getJSONObject(i).getInt("money"));
-                    tv_4.setText(his.getJSONObject(i).getInt("user"));
-                    tv_5.setText(his.getJSONObject(i).getInt("time"));
+                    tv_4.setText(his.getJSONObject(i).getString("user"));
+                    tv_5.setText(his.getJSONObject(i).getString("time"));
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
