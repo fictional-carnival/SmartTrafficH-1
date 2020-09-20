@@ -16,6 +16,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.lenovo.smarttraffic.bean.User;
 import com.lenovo.smarttraffic.ui.activity.BaseActivity;
 import com.lenovo.smarttraffic.ui.activity.Item1Activity;
 import com.lenovo.smarttraffic.ui.activity.LoginActivity;
@@ -203,6 +205,18 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     protected void onStart() {
         super.onStart();
-//        imageView.setClickable(!InitApp);
+        imageView.setClickable(!InitApp.isLogin);
+        if (InitApp.isLogin) {
+            User.ROWSDETAILBean user = InitApp.getUser("username", InitApp.sp.getString("UserName", null));
+            if ("女".equals(user.getPsex())) {
+                imageView.setImageResource(R.mipmap.touxiang_1);
+            } else {
+                imageView.setImageResource(R.mipmap.touxiang_2);
+            }
+            textView.setText("您好，" + user.getPname());
+        } else {
+            textView.setText("点击头像登录");
+            imageView.setImageResource(R.mipmap.avatar);
+        }
     }
 }

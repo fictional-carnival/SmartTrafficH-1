@@ -130,7 +130,9 @@ public class InitApp extends MultiDexApplication {
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url + path, object, listener, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError volleyError) {
-                toast("网络连接故障");
+                if (volleyError.networkResponse == null) {
+                    toast("网络连接故障");
+                }
             }
         });
         queue.add(request);

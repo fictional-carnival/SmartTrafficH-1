@@ -8,6 +8,8 @@
     android:fitsSystemWindows="true"
     tools:context=".ui.activity.LoginActivity">
 
+    <include layout="@layout/toolbar_main" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,13 +23,18 @@
             app:errorTextAppearance="@style/TextAppearance.Design.Error"
             android:id="@+id/textInputLayoutName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_50"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp">
 
             <EditText
                 android:id="@+id/editTextName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_name"
+                android:maxLength="14"
+                android:singleLine="true"
                 android:textColorHint="@color/colorGray" />
         </android.support.design.widget.TextInputLayout>
 
@@ -35,26 +42,38 @@
             app:errorTextAppearance="@style/TextAppearance.Design.Error"
             android:id="@+id/textInputLayoutPassword"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginLeft="200dp">
 
             <EditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:maxLength="14"
+                android:singleLine="true"
                 android:textColorHint="@color/colorGray" />
         </android.support.design.widget.TextInputLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="200dp"
+            android:layout_marginTop="@dimen/margin_30"
+            android:layout_marginLeft="200dp">
 
             <CheckBox
+                android:onClick="onClick"
                 android:id="@+id/jzpwdCB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:text="@string/remember_pwd" />
 
             <CheckBox
@@ -63,20 +82,28 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:text="@string/auto_login" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp"
+            android:layout_marginTop="@dimen/margin_30">
 
             <Button
+                android:onClick="onClick"
                 android:id="@+id/loginBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@color/colorPrimary"
                 android:text="@string/login"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:textColor="#ffffff"
                 android:textSize="18sp"
                 tools:ignore="ButtonStyle" />
@@ -87,6 +114,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/register"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:textSize="18sp"
                 tools:ignore="ButtonStyle" />
         </LinearLayout>
