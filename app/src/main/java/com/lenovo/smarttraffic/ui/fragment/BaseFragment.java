@@ -88,6 +88,10 @@ public abstract class BaseFragment extends SupportFragment implements View.OnCli
         contentPage.refreshPage(o);
     }
 
+    public void refresh() {
+        contentPage.refresh();
+    }
+
     /**
      * 返回据的fragment填充的具体View
      */

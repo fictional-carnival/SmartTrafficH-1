@@ -26,6 +26,7 @@ public abstract class ContentPage extends FrameLayout{
 	private View successView;
 	/**默认是加载中的状态*/
 	private PageState mState = PageState.STATE_LOADING;
+	public boolean error;
 
 	/**
 	 * 定义页面状态常量
@@ -71,6 +72,7 @@ public abstract class ContentPage extends FrameLayout{
 			errorView = View.inflate(getContext(), R.layout.page_error, null);
 			Button btn_reload = errorView.findViewById(R.id.btn_reload);
 			btn_reload.setOnClickListener(v -> {
+				error = true;
 				mState = PageState.STATE_LOADING;
 				showPage();
 				loadDataAndRefreshPage();/*重新加载*/
@@ -129,13 +131,19 @@ public abstract class ContentPage extends FrameLayout{
 	}
 
 	public void refreshPage(Object o) {
-		if (o == null) {
-			//说明木有数据，那么对应的state应该是error
-			mState = PageState.STATE_ERROR;
-		} else {
-			//说明请求回来的有数据，那么对应的state应该是success
-			mState = PageState.STATE_SUCCESS;
-		}
+//		if (o == null) {
+//			//说明木有数据，那么对应的state应该是error
+//			mState = PageState.STATE_ERROR;
+//		} else {
+//			//说明请求回来的有数据，那么对应的state应该是success
+//			mState = PageState.STATE_SUCCESS;
+//		}
+		mState = checkData(o);
+		showPage();
+	}
+
+	public void refresh() {
+		mState = PageState.STATE_LOADING;
 		showPage();
 	}
 
