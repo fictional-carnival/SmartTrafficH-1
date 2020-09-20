@@ -21,6 +21,9 @@ import com.lenovo.smarttraffic.bean.User;
 import com.lenovo.smarttraffic.ui.activity.BaseActivity;
 import com.lenovo.smarttraffic.ui.activity.Item1Activity;
 import com.lenovo.smarttraffic.ui.activity.LoginActivity;
+import com.lenovo.smarttraffic.ui.activity.SbActivity;
+import com.lenovo.smarttraffic.ui.activity.UserActivity;
+import com.lenovo.smarttraffic.ui.activity.WeatherActivity;
 import com.lenovo.smarttraffic.ui.activity.SettingsActivity;
 import com.lenovo.smarttraffic.ui.activity.XfzxActivity;
 import com.lenovo.smarttraffic.ui.fragment.DesignFragment;
@@ -169,6 +172,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         switch (id){
             case R.id.nav_account:
                 string = "个人";
+                startActivity(new Intent(this, UserActivity.class));
                 break;
             case R.id.item_1:
                 string = "item1";
@@ -176,6 +180,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 break;
             case R.id.item_2:
                 string = "item2";
+                startActivity(new Intent(this, WeatherActivity.class));
                 break;
             case R.id.item_3:
                 string = "item3";

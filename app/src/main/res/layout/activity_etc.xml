@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/toolbar_main" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="40dp"
+            android:text="ETC账户信息"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:text="账户余额："
+                android:textSize="30dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv1"
+                android:textColor="#f00"
+                android:textSize="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:text="车号："
+                android:textSize="30dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/sp1"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/border88"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/tv2"
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/border_circle"
+                android:textColor="#000"
+                android:text="查询"
+                android:textSize="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv3"
+                android:layout_marginLeft="20dp"
+                android:textColor="#f00"
+                android:text="查询成功"
+                android:textSize="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:text="充值金额："
+                android:textSize="30dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/sp2"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/border88"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/tv4"
+                android:padding="10dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/border_circle"
+                android:textColor="#000"
+                android:text="查询"
+                android:textSize="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/tv5"
+                android:layout_marginLeft="20dp"
+                android:textColor="#f00"
+                android:text="充值成功"
+                android:textSize="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="40dp"
+            android:text="查询充值记录"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="#000"
+                android:text="车号："
+                android:textSize="30dp"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+
+            <Spinner
+                android:id="@+id/sp3"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/border88"
+                android:layout_width="200dp"
+                android:layout_height="50dp" />
+            <RadioGroup
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:checked="true"
+                    android:text="时间升序"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:text="时间降序"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+            <TextView
+                android:background="@drawable/border_circle"
+                android:id="@+id/tv6"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000"
+                android:text="查询"
+                android:textSize="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <TextView
+                    android:gravity="center"
+                    android:textSize="25dp"
+                    android:background="@drawable/border88"
+                    android:text="序号"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:gravity="center"
+                    android:textSize="25dp"
+                    android:background="@drawable/border88"
+                    android:text="序号"
+                    android:layout_weight="0.8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="25dp"
+                    android:background="@drawable/border88"
+                    android:text="充值金额（元）"
+                    android:layout_weight="1.3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="25dp"
+                    android:background="@drawable/border88"
+                    android:text="操作人"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:gravity="center"
+                    android:textSize="25dp"
+                    android:background="@drawable/border88"
+                    android:text="充值时间"
+                    android:layout_weight="1.2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+            <ListView
+                android:id="@+id/lv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

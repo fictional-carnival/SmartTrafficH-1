@@ -19,7 +19,9 @@ import com.github.mikephil.charting.utils.ViewPortHandler;
 import com.lenovo.smarttraffic.Constant;
 import com.lenovo.smarttraffic.InitApp;
 import com.lenovo.smarttraffic.R;
+import com.lenovo.smarttraffic.ui.activity.SbActivity;
 import com.lenovo.smarttraffic.ui.activity.SginActivity;
+import com.lenovo.smarttraffic.ui.activity.UserActivity;
 import com.lenovo.smarttraffic.ui.activity.WeatherActivity;
 
 import java.util.ArrayList;
@@ -246,10 +248,11 @@ public class MainContentFragment extends BaseFragment {
                     startActivity(new Intent(getContext(),SginActivity.class));
                     break;
                 case R.id.ll_subway:
-                    startActivity(new Intent());
+                    startActivity(new Intent(getContext(), SbActivity.class));
+
                     break;
                 case R.id.ll_user:
-                    startActivity(new Intent());
+                    startActivity(new Intent(getContext(), UserActivity.class));
                     break;
             }
         }else {

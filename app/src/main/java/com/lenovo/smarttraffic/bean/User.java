@@ -56,6 +56,16 @@ public class User {
         private int sc;
         private int zd;
 
+        public int getZj() {
+            return zj;
+        }
+
+        public void setZj(int zj) {
+            this.zj = zj;
+        }
+
+        private int zj;
+
         public int getSc() {
             return sc;
         }
