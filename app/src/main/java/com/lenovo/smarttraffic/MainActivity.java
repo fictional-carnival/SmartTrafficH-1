@@ -21,6 +21,7 @@ import com.lenovo.smarttraffic.bean.User;
 import com.lenovo.smarttraffic.ui.activity.BaseActivity;
 import com.lenovo.smarttraffic.ui.activity.Item1Activity;
 import com.lenovo.smarttraffic.ui.activity.LoginActivity;
+import com.lenovo.smarttraffic.ui.activity.SettingsActivity;
 import com.lenovo.smarttraffic.ui.activity.XfzxActivity;
 import com.lenovo.smarttraffic.ui.fragment.DesignFragment;
 import com.lenovo.smarttraffic.ui.fragment.MainContentFragment;
@@ -182,6 +183,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 break;
             case R.id.nav_setting:
                 string = "设置";
+                startActivity(new Intent(this, SettingsActivity.class));
                 break;
             case R.id.nav_about:
                 string = "关于";

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/windowBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_main" />
+    <LinearLayout
+        android:background="@color/White"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_80"
+        android:layout_width="800dp"
+        android:layout_height="500dp" >
+        <LinearLayout
+            android:id="@+id/ll_etc"
+            android:onClick="onClick"
+            android:paddingLeft="@dimen/margin_50"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_80">
+
+            <ImageView
+                android:src="@mipmap/log"
+                android:layout_width="60dp"
+                android:layout_marginRight="@dimen/margin_30"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="40sp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="查询ETC账户信息"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_qd"
+            android:onClick="onClick"
+            android:paddingLeft="@dimen/margin_50"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_80">
+
+            <ImageView
+                android:src="@mipmap/liveing"
+                android:layout_width="60dp"
+                android:layout_marginRight="@dimen/margin_30"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="40sp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="用户签到"
+                android:onClick="onClick"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="@dimen/margin_50"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_80">
+
+            <ImageView
+                android:src="@mipmap/b"
+                android:layout_width="60dp"
+                android:layout_marginRight="@dimen/margin_30"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="40sp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="查询ETC通行日志"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:paddingLeft="@dimen/margin_50"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_80">
+
+            <ImageView
+                android:src="@mipmap/layer_change"
+                android:layout_width="60dp"
+                android:layout_marginRight="@dimen/margin_30"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:textSize="40sp"
+                android:textColor="@color/Black"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="当前版本号"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <Button
+            android:textStyle="bold"
+            android:textColor="@color/White"
+            android:textSize="40sp"
+            android:id="@+id/bt_exit"
+            android:text="退出登录"
+            android:onClick="onClick"
+            android:layout_gravity="center"
+            android:background="@drawable/exit_yes"
+            android:layout_marginTop="@dimen/margin_50"
+            android:padding="10dp"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
