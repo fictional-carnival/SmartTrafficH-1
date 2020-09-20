@@ -21,6 +21,7 @@ import com.lenovo.smarttraffic.bean.User;
 import com.lenovo.smarttraffic.ui.activity.BaseActivity;
 import com.lenovo.smarttraffic.ui.activity.Item1Activity;
 import com.lenovo.smarttraffic.ui.activity.LoginActivity;
+import com.lenovo.smarttraffic.ui.activity.XfzxActivity;
 import com.lenovo.smarttraffic.ui.fragment.DesignFragment;
 import com.lenovo.smarttraffic.ui.fragment.MainContentFragment;
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -177,6 +178,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 break;
             case R.id.item_3:
                 string = "item3";
+                startActivity(new Intent(this, XfzxActivity.class));
                 break;
             case R.id.nav_setting:
                 string = "设置";
@@ -186,7 +188,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 break;
         }
         if (!TextUtils.isEmpty(string))
-        Toast.makeText(InitApp.getContext(), "你点击了"+"\""+string+"\"", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(InitApp.getContext(), "你点击了"+"\""+string+"\"", Toast.LENGTH_SHORT).show();
 //        mDrawer.closeDrawer(GravityCompat.START);
         mDrawer.closeDrawers();
         return true;
