@@ -81,6 +81,18 @@
             android:name="com.amap.api.v2.apikey"
             android:value="bdc9db56ef3f82cb64db5c8212f0dddf"/>
 
+        <activity android:name=".ui.activity.SginActivity"
+            android:configChanges="orientation|screenSize|uiMode"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ui.activity.SginActivity2"
+            android:configChanges="orientation|screenSize|uiMode"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".ui.activity.WeatherActivity"
+            android:configChanges="orientation|screenSize|uiMode"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
     </application>
 
 </manifest>

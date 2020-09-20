@@ -2,9 +2,13 @@ package com.lenovo.smarttraffic.ui.fragment;
 
 import android.graphics.Color;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.RadarChart;
 import com.lenovo.smarttraffic.Constant;
+import com.lenovo.smarttraffic.R;
 
 
 /**
@@ -22,14 +26,23 @@ public class DesignFragment extends BaseFragment {
         return instance;
     }
 
+    private View view;
+    private Spinner spinner;
+    private RadarChart radarChart;
+    private String[] strs = new String[]{"幸福路","联想路","学院路","医院路","幸福路"};
+    private String[] strs2 = new String[]{"超速行驶","非法便道","闯红绿灯","驾驶期间玩手机"};
+
 
     @Override
     protected View getSuccessView() {
-        TextView view = new TextView(getActivity());
-        view.setText("创意设计");
-        view.setTextColor(Color.RED);
-        view.setTextSize(50);
+        view = View.inflate(getContext(), R.layout.fragment_design,null);
         return view;
+    }
+
+    public void initSpinner(){
+        spinner.setAdapter(new ArrayAdapter<String>(getContext(),R.layout.f_spinner,strs));
+
+
     }
 
     @Override
