@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import com.lenovo.smarttraffic.ui.activity.BaseActivity;
 import com.lenovo.smarttraffic.ui.activity.Item1Activity;
@@ -39,6 +40,9 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private static final int FRAGMENT_DESIGN = 1;
     private BottomNavigationView bottom_navigation;
     private long exitTime = 0;
+    private TextView tv_title;
+    private TextView textView;
+    private CircleImageView imageView;
     //    private int position;
 
     @Override
@@ -67,7 +71,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         hideFragment(ft);
         switch (index) {
             case FRAGMENT_MAIN:
-                mToolbar.setTitle(R.string.title_main);
+                tv_title.setText(R.string.title_main);
                 if (mMainContent == null){
                     mMainContent = MainContentFragment.getInstance();
                     ft.add(R.id.container,mMainContent,MainContentFragment.class.getName());
@@ -76,7 +80,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 }
                 break;
             case FRAGMENT_DESIGN:
-                mToolbar.setTitle(R.string.creative_design);
+                tv_title.setText(R.string.creative_design);
                 if (mDesignFragment == null){
                     mDesignFragment = DesignFragment.getInstance();
                     ft.add(R.id.container,mDesignFragment,DesignFragment.class.getName());
@@ -102,10 +106,12 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private void initView() {
         mToolbar = findViewById(R.id.toolbar);
         mDrawer = findViewById(R.id.drawer_layout);
+        tv_title = findViewById(R.id.tv_title);
         NavigationView navigationView = findViewById(R.id.nav_view);
         bottom_navigation = findViewById(R.id.bottom_navigation);
-        CircleImageView imageView = navigationView.getHeaderView(0).findViewById(R.id.ivAvatar);
-        setSupportActionBar(mToolbar);
+        imageView = navigationView.getHeaderView(0).findViewById(R.id.ivAvatar);
+        textView = navigationView.getHeaderView(0).findViewById(R.id.textView);
+//        setSupportActionBar(mToolbar);
         imageView.setOnClickListener(this);
         /*设置选择item监听*/
         navigationView.setNavigationItemSelectedListener(this);
@@ -192,5 +198,11 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             startActivity(intent);
         }
         mDrawer.closeDrawer(GravityCompat.START);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+//        imageView.setClickable(!InitApp);
     }
 }

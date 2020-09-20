@@ -56,7 +56,9 @@ public class InitApp extends MultiDexApplication {
     public static Gson gson;
     public static JSONObject user;
     public static ArrayList<String> label;
+    public static boolean isLogin;
     private static Toast tos;
+
 
     public static synchronized InitApp getInstance() {
         synchronized (InitApp.class) {
