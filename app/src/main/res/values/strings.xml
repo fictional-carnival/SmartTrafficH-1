@@ -21,8 +21,8 @@
     <string name="hint_password">密码</string>
     <string name="error_login_empty">用户名不能为空</string>
     <string name="error_pwd_empty">密码不能为空</string>
-    <string name="item1">item1</string>
-    <string name="item2">item2</string>
+    <string name="item1">交通资讯</string>
+    <string name="item2">天气预报</string>
     <string name="item3">item3</string>
     <string name="item4">item4</string>
     <string name="title_item_main">Tab</string>
